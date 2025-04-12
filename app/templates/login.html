@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Login | OnikStore Inventario</title>
+    <link rel="stylesheet" href="/static/login.css">
+    <link rel="icon" href="/static/img/logo.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-card">
+            <h2 class="login-title">Iniciar Sesión</h2>
+            <form class="login-form" action="/token" method="post">
+                <input type="text" name="username" placeholder="Usuario" required class="login-input"><br>
+                <input type="password" name="password" placeholder="Contraseña" required class="login-input"><br>
+                <button type="submit" class="login-btn">Entrar</button>
+            </form>
+            <p class="login-link">¿No tienes cuenta? <a href="/register">Regístrate</a></p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; <span id="year"></span> OnikStore. Todos los derechos reservados</p>
+        <p class="copy">Desarrollado y diseñado By <strong>Onik Orosco</strong></p>
+    </footer>
+
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

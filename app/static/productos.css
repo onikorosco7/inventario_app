@@ -1,0 +1,128 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    margin: 0;
+    background-color: #f4f6f8;
+    color: #333;
+}
+
+header {
+    background-color: #1a1a1a;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+}
+
+.productos-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    padding: 40px;
+}
+
+.card {
+    background-color: white;
+    border-radius: 14px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.03);
+}
+
+.producto-img {
+    width: 100%;
+    max-height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.producto-nombre {
+    font-size: 20px;
+    font-weight: 600;
+    color: #4f46e5;
+    margin-top: 10px;
+}
+
+.producto-precio {
+    color: #16a34a;
+    font-size: 18px;
+    margin-top: 5px;
+}
+
+.producto-stock {
+    font-size: 14px;
+    margin-top: 5px;
+    color: #888;
+}
+
+.producto-descripcion {
+    font-size: 14px;
+    margin: 10px 0;
+    color: #555;
+}
+
+.botones {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.btn {
+    padding: 8px 14px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.btn-editar {
+    background-color: #3b82f6;
+    color: white;
+}
+
+.btn-eliminar {
+    background-color: #ef4444;
+    color: white;
+}
+
+.btn-volver {
+    display: inline-block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #4f46e5;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+.btn-volver:hover {
+    background-color: #4338ca;
+}
+
+/* Footer */
+footer {
+    background-color: #1a1a1a;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    font-size: 0.9rem;
+    margin-top: 2rem;
+}
+
+.copy {
+    margin-top: 0.5rem;
+    color: #f1c40f;
+}

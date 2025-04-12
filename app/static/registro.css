@@ -1,0 +1,101 @@
+/* Estilo oscuro responsive */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Segoe UI', sans-serif;
+    background: #121212;
+    color: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Contenedor centrado */
+.registro-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Tarjeta del formulario */
+.registro-card {
+    background: #1e1e1e;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    max-width: 420px;
+    text-align: center;
+}
+
+/* Título */
+.registro-title {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #ffffff;
+}
+
+/* Campos de entrada */
+.registro-input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    background-color: #2c2c2c;
+    color: #fff;
+    outline: none;
+}
+
+/* Botón */
+.registro-btn {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    background-color: #007acc;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.registro-btn:hover {
+    background-color: #005e99;
+}
+
+/* Enlace de login */
+.registro-link {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #ccc;
+}
+
+.registro-link a {
+    color: #59baff;
+    text-decoration: none;
+}
+
+.registro-link a:hover {
+    text-decoration: underline;
+}
+
+/* Footer oscuro al pie */
+footer {
+    background: #1e1e1e;
+    color: #888;
+    text-align: center;
+    padding: 12px 0;
+    font-size: 14px;
+}
+
+/* Copyright */
+.copy {
+    font-size: 0.8em;
+    color: #b0b0b0;
+    margin-top: 10px;
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Productos | OnikStore</title>
+    <link rel="stylesheet" href="static/productos.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Catálogo de Productos</h1>
+    </header>
+
+    <section class="productos-container">
+        {% for producto in productos %}
+            <div class="card">
+                {% if producto.imagen_url %}
+                    <img src="{{ producto.imagen_url }}" alt="Imagen del producto" class="producto-img">
+                {% else %}
+                    <img src="/static/img/logo.png" alt="Sin imagen" class="producto-img">
+                {% endif %}
+                <div class="producto-nombre">{{ producto.nombre }}</div>
+                <div class="producto-precio">S/. {{ producto.precio }}</div>
+                <div class="producto-stock">Stock: {{ producto.stock }}</div>
+                <div class="producto-descripcion">{{ producto.descripcion }}</div>
+                <div class="botones">
+                    <button class="btn btn-editar">Editar</button>
+                    <button class="btn btn-eliminar">Eliminar</button>
+                </div>
+            </div>
+        {% else %}
+            <p style="grid-column: 1 / -1; text-align: center;">No hay productos registrados aún.</p>
+        {% endfor %}
+    </section>
+
+    <div style="text-align: center;">
+        <a href="/" class="btn-volver">Volver al Inicio</a>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2025 OnikStore. Todos los derechos reservados.</p>
+        <p class="copy">Desarrollado y diseñado por <strong>Onik Orosco</strong></p>
+    </footer>
+</body>
+</html>

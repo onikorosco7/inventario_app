@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ OnikStore }}</title>
+    <link rel="stylesheet" href="static/estilo.css">
+    <link rel="icon" href="/static/img/logo.png">
+</head>
+<body>
+
+    <!-- Barra de navegación -->
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>OnikStore</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="/">Inicio</a></li>
+                <li><a href="/productos">Productos</a></li>
+                <li><a href="/categorias">Categorías</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="/login">Iniciar sesión</a></li>
+                <li><a href="/register">Registrarse</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Sección de bienvenida -->
+    <section class="welcome-section">
+        <div class="welcome-text">
+            <h2>Bienvenido a OnikStore</h2>
+            <p>La mejor tienda online para productos exclusivos con gestión de inventarios eficiente.</p>
+            <a href="/productos" class="cta-button">Ver productos</a>
+        </div>
+    </section>
+
+    <!-- Promociones -->
+    <section class="promociones">
+        <h2>Promociones del Mes</h2>
+        <div class="promo-box">
+            <h3>20% de descuento en tu primera compra</h3>
+            <p>Usa el código: <strong>BIENVENIDO20</strong></p>
+            <a href="/productos" class="cta-button">Aprovecha ahora</a>
+        </div>
+    </section>
+
+    <!-- Nuevos Productos -->
+    <section class="nuevos-productos">
+        <h2>Nuevos Productos</h2>
+        <div class="product-cards">
+            <!-- Este contenido lo puedes llenar dinámicamente desde FastAPI -->
+            <div class="product-card">
+                <img src="{{ url_for('static', path='img/snacks.jpg') }}" alt="Producto nuevo 1">
+                <h3>SNACKS</h3>
+                <p>Pack con papas, galletas, chocolates y gaseosa.</p>
+                <p>Precio: S/10.99</p>
+            </div>
+            <div class="product-card">
+                <img src="{{ url_for('static', path='img/pechuga.jpg') }}" alt="Producto nuevo 2">
+                <h3>Pechuga Congelada</h3>
+                <p>Práctico para cocinar en casa, sellado al vacío.</p>
+                <p>Precio: S/15.99</p>
+            </div>
+            <div class="product-card">
+                <img src="{{ url_for('static', path='img/gloria.jpeg') }}" alt="Producto nuevo 3">
+                <h3>Yogurt Natural</h3>
+                <p>Yogurt saludable con trozos de fresa y plátano.</p>
+                <p>Precio: S/9.50</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección sobre nosotros -->
+    <section class="about-us">
+        <h2>Sobre nosotros</h2>
+        <p>En OnikStore, nos dedicamos a ofrecer productos de alta calidad con una gestión de inventarios eficiente. Somos una tienda online que te asegura una experiencia de compra sin preocupaciones.</p>
+    </section>
+
+    <!-- Sección de contacto -->
+    <section class="contact" id="contacto">
+        <h2>Contacto</h2>
+        <p>¿Tienes alguna pregunta? ¡Estamos aquí para ayudarte!</p>
+        <form class="form-contacto" method="post" action="/enviar-consulta">
+            <input type="text" name="nombre" placeholder="Tu nombre" required>
+            <input type="email" name="email" placeholder="Tu correo" required>
+            <textarea name="mensaje" placeholder="Tu mensaje" rows="4" required></textarea>
+            <button type="submit" class="cta-button">Enviar mensaje</button>
+        </form>
+    </section>
+
+    <!-- Boletín de suscripción -->
+    <section class="suscripcion">
+        <h2>Suscríbete a nuestro boletín</h2>
+        <p>Recibe promociones exclusivas y noticias directamente en tu correo.</p>
+        <form class="form-suscripcion" method="post" action="/suscribirse">
+            <input type="email" name="email" placeholder="Tu correo electrónico" required>
+            <button type="submit">Suscribirme</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 OnikStore. Todos los derechos reservados.</p>
+        <p class="copy">Desarrollado y diseñado por <strong>Onik Orosco</strong></p>
+    </footer>
+
+</body>
+</html>

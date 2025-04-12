@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Registro | OnikStore Inventario</title>
+    <link rel="stylesheet" href="/static/registro.css">
+    <link rel="icon" href="/static/img/logo.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div class="registro-container">
+        <div class="registro-card">
+            <h2 class="registro-title">Crear cuenta</h2>
+            <form class="registro-form" action="/register" method="post">
+                <input type="text" name="username" placeholder="Nombre de usuario" required class="registro-input"><br>
+                <input type="email" name="email" placeholder="Correo electrónico" required class="registro-input"><br>
+                <input type="password" name="password" placeholder="Contraseña" required class="registro-input"><br>
+                <input type="password" name="confirm_password" placeholder="Confirmar contraseña" required class="registro-input"><br>
+                <button type="submit" class="registro-btn">Registrar</button>
+            </form>
+            <p class="registro-link">¿Ya tienes cuenta? <a href="/login">Iniciar sesión</a></p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; <span id="year"></span> OnikStore. Todos los derechos reservados</p>
+        <p class="copy">Desarrollado y diseñado By <strong>Onik Orosco</strong></p>
+    </footer>
+
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+
+        document.querySelector(".registro-form").addEventListener("submit", function(e) {
+            const pass = document.querySelector("input[name='password']").value;
+            const confirm = document.querySelector("input[name='confirm_password']").value;
+            if (pass !== confirm) {
+                e.preventDefault();
+                alert("Las contraseñas no coinciden.");
+            }
+        });
+    </script>
+</body>
+</html>
